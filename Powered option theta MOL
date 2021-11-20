@@ -76,9 +76,9 @@ while n<1921:
     print("The value at xx=100 is:", E[m])
     error=np.log(abs(E[m]-676.758))
     print("The error is:", error)
-    M=np.dot(AA,E0)+np.dot(expm(T*AA),F)
+    M=-np.dot(AA,E0)-np.dot(expm(T*AA),F)
     print("The theta is:",M[m])
-    errort=np.log(abs(M[m]-819.296))
+    errort=np.log(abs(M[m]+819.296))
     print("The error is:", errort)
     for i in range(n-1):
         B2[i][i+1]=1/(h[i+1]+h[i+2])
